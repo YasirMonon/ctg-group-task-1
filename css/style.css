@@ -1,0 +1,933 @@
+/**
+ * ----------------------------------------
+ * swal modal css modify
+ * ----------------------------------------
+ */
+
+ .swal2-styled.swal2-confirm{
+    /* display: none !important; */
+    background-color: #dd2e43 !important;
+    margin-top: -13em;
+    width: 7em;
+  }
+ 
+  .swal2-popup{
+    background: #ffffff00 !important;
+    
+  }
+  .swal2-container.swal2-backdrop-show{
+    background: rgba(0,0,0,.6) !important;
+  }
+
+
+body {
+    /* Playfair Display - font-weight avaiable: 400, 700 */
+    font-family: 'Playfair Display', serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    color: #111111;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.cta-btn {
+    border-radius: 50px;
+    background-color: #e8bf5d;
+    padding: 12px 35px;
+}
+
+.cta-btn:hover {
+    background: #eecf86;
+}
+
+/* Lines */
+
+.lines {
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.lines > .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.lines .row {
+    height: 100vh;
+}
+
+.line {
+    position: absolute;
+    border-right: 1px solid #000000;
+    height: 100vh;
+    opacity: 0.05;
+}
+
+.line:nth-child(1) {
+    border-left: 1px solid #000000;
+}
+
+.navbar {
+    padding: 10px 0;
+    position: fixed;
+    background-color: #ffffff;
+}
+
+
+.navbar-toggler-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-brand {
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.nav-link {
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 10px !important;
+    margin: 0 10px;
+}
+
+.navbar-brand:hover {
+    color: #e8bf5d;
+    transition: all 0.2s;
+}
+
+.navbar-brand span {
+    color: #e8bf5d;
+}
+
+
+.navbar .underline {
+    position: relative !important;
+    display: block;
+    /* letter-spacing: 0.56px; */
+}
+
+.navbar .underline::before {
+    display: block;
+    content: '';
+    position: absolute !important;
+    width: 0;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #e8bf5d;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar .underline:hover {
+    color: #111111;
+}
+
+.navbar .underline:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+.navbar .underline:hover .active::after {
+    width: 0;
+    opacity: 1;
+}
+
+.navbar .active::after {
+    width: 100%;
+    display: block;
+    content: '';
+    position: absolute !important;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #e8bf5d;
+    transition: all 0.2s ease-in-out;
+}
+/* ========== Hero */
+
+.hero-section {
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 67px;
+    background: black;
+}
+
+.hero-section__header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('../images/hero.png');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh !important;
+}
+
+.hero-section__heading {
+    position: relative;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero-section__heading > p {
+    margin-bottom: 0;
+}
+
+.hero-section__heading::before {
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #e8bf5d;
+    height: 80%;
+    width: 2px;
+    top: 50%;
+    margin-left: -18px;
+    transform: translateY(-50%);
+}
+
+.hero-section__title {
+    font-size: 65px;
+    font-weight: 400;
+    font-family: "Playfair Display";
+    letter-spacing: 2.6px;
+    color: #ffffff;
+    line-height: 80%;
+    margin-bottom: 8px;
+}
+
+.hero-section__subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 31px;
+    letter-spacing: 1.24px;
+    color: #ffffff;
+}
+
+/* ========== Section */
+
+.page-section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    counter-increment: sectionNr;
+    display: relative;
+}
+
+.page-section:nth-child(odd) {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ========== About */
+
+.section-header {
+    margin-bottom: 70px;
+}
+
+.section-header__box {
+    margin-left: 15px;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 20px;
+    position: relative;
+    z-index: 500;
+}
+
+.section-header__box::before {
+    content: '0' counter(sectionNr);
+    display: block;
+    position: absolute;
+    color: #f3f3f3;
+    font-family: "Open Sans", sans-serif;
+    font-size: 185px;
+    font-weight: 400;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.page-section:nth-child(odd) .section-header__box::before {
+    color: #ffffff;
+    opacity: 0.12;
+}
+
+.page-section:nth-child(odd) .section-header__box::before {
+    color: #ffffff;
+    opacity: 0.12;
+}
+
+.section-header__heading, .section-header__text {
+    position: relative;
+}
+
+.section-header__heading {
+    font-size: 31px;
+}
+
+.section-header__text {
+    max-width: 770px;
+    margin: 0;
+    font-size: 21px;
+}
+
+.section-header__text.dark {
+    color: #b9b9b9;
+}
+
+.history-section__date, .history-section__text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.history-section__date {
+    font-size: 18px;
+    width: 100px;
+    flex-shrink: 0;
+    position: relative;
+    font-weight: bold;
+}
+
+.history-section__date::before {
+    display: block;
+    content: "-";
+    position: absolute;
+    right: 35px;
+}
+
+.expertise-section p {
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.56px;
+}
+
+/* ========== Practice */
+
+
+
+.practice__icon {
+    color: #e8bf5d;
+    font-size: 35px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.practice__point {
+    margin-left: 30px;
+}
+
+.practice__point p {
+    width: 357px;
+    font-size: 14px;
+    font-family: "Open Sans";
+    letter-spacing: 0.50px;
+    line-height: 25px;
+}
+
+.practice__title {
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    margin-bottom: 30px;
+}
+
+/* ========== Lawyers */
+
+.lawyer-img {
+    margin-bottom: 30px;
+    width: 255px;
+    height: auto;
+    transition: 0.2s;
+}
+
+.lawyer-img:hover {
+    opacity: 0.75;
+}
+
+.name {
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    letter-spacing: 0.84px;
+    line-height: 31px;
+}
+
+.name > span {
+    display: block;
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.name.dark, .name.dark > span {
+    color: #ffffff;
+}
+
+/* ========== Clients */
+
+.client-img {
+    margin-bottom: 20px;
+    height: auto;
+    box-shadow: 20px 20px 0 #e8bf5d;
+    position: relative;
+}
+
+.client-container {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .client-img {
+        border: 1px solid #644f1d;
+        box-shadow: none;
+        padding: 25px;
+    }
+}
+
+.quote__text {
+    position: relative;
+}
+
+.quote__text::before {
+    /* Style for "“" */
+    position: absolute;
+    display: block;
+    content: '“';
+    top: -15px;
+    left: -50px;
+    opacity: 0.25;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 100%;
+    z-index: 100;
+}
+
+@media (max-width: 990px) {
+    .quote__text::before {
+        display: none;
+    }
+}
+
+.quote__text {
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: 0.56px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators > li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.carousel-indicators > li.active {
+    background: #ffffff;
+}
+
+/* ========== Publications */
+
+.publications__img {
+    margin-bottom: 30px;
+    transition: 0.2s;
+}
+
+.publications__link {
+  display: block;
+}
+
+.publications__link:hover > .publications__img {
+    opacity: 0.75;
+}
+
+.publications__title {
+    font-family: "Playfair Display";
+    font-size: 21px;
+    letter-spacing: 0.84px;
+    margin-bottom: 5px;
+}
+
+.publications__author {
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.publications__author > span {
+    margin-right: 5px;
+}
+
+.publications__author > span, .publications__date {
+    color: #999999;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 0.64px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.publications__text {
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-bottom: 40px;
+}
+
+.publications__comments {
+    border-bottom: 3px solid #e8bf5d;
+    padding-bottom: 20px;
+}
+
+.publications__comments p {
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.64px;
+    margin-bottom: 0;
+}
+
+.publications__comments i {
+    font-size: 17px;
+    margin-right: 5px;
+} 
+
+.about-section, .lawyers-section, .publications-section {
+  padding-bottom: 50px;
+}
+
+/* ========== FAQ */
+
+.accordion {
+    margin-right: 30px;
+    width: 100%;
+}
+
+.card {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.card-header {
+    font-weight: 700;
+    position: relative;
+    transition: 0.2s;
+}
+
+.card-header::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background: #e8bf5d;
+  transition: 0.2s;
+}
+
+.card-header.active {
+    color: #E8BF5D;
+}
+
+.card .btn {
+    font-size: 15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: none;
+}
+
+.plusminus-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+
+.plusminus-icon::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 16px;
+    height: 3px;
+    background: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.plusminus-icon.active::before {
+    background: #e8bf5d;
+}
+
+.plusminus-icon.active::after {
+    background: #e8bf5d;
+    opacity: 0;
+}
+
+.plusminus-icon::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 3px;
+    height: 16px;
+    background: #ffffff;
+    transform-origin: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.card-header:hover::before {
+  height: 5px;
+}
+
+.card-body {
+    background-color: #e8bf5d;
+    color: #111111;
+    z-index: 10;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.56px;
+}
+
+.custom-card {
+    width: 500px;
+    padding: 42px 46px;
+    border-radius: 3px;
+    background-color: #e8bf5d;
+    color: #111111;
+    z-index: 10;
+    flex-shrink: 0;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ========== Contact */
+
+.contact-section {
+    position: relative;
+}
+
+.postcard {
+    background: #fff;
+    z-index: 100;
+    position: relative;
+    width: auto;
+    box-shadow: 0 12px 40px rgba(104, 86, 42, 0.15);
+    border-radius: 3px;
+    padding: 50px;
+    display: inline-block;
+    margin-left: 130px;
+}
+
+.postcard__img {
+    align-self: center;
+    box-shadow: -20px 20px 0 #e8bf5d;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.custom-form {
+    align-self: flex-end;
+    margin-top: 15px;
+    margin-right: 70px;
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.form-group {
+    position: relative;
+}
+
+.custom-form__label {
+    pointer-events: none;
+}
+
+.custom-form__label::after {
+    color: #6b6b6b;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: italic;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin: 0;
+    opacity: 1;
+    content: attr(aria-label);
+    display: block;
+    transition: 0.2s;
+}
+
+
+.custom-form__input {
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    transition: 0.2s;
+    padding-left: 0;
+    position: relative;
+    font-family: "Open Sans", sans-serif; 
+}
+
+.custom-form__input::before {
+    content: "test";
+    display: block;
+    position: absolute;
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+.custom-form__input:focus + .custom-form__label::after,
+.has-val.custom-form__input + .custom-form__label::after {
+    top: -20px;
+}
+
+
+.custom-form__input:focus {
+    color: inherit;
+    border-radius: 0;
+    border-bottom: 1px solid #bbb;
+    outline: 0;
+    box-shadow: none;
+}
+
+.custom-form__input:focus .custom-form__label {
+    color: red;
+}
+
+textarea.custom-form__input {
+    resize: none;
+}
+
+/* button for scroll */
+
+
+/* -------- footer */
+
+.custom-footer {
+    background-color: #111111;
+    color: white;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+.custom-footer__copy {
+    color: #b5b5b5;
+}
+
+.custom-footer__link {
+    color: #fff;
+    transition: 0.2s;
+    padding: 15px 0;
+}
+
+.custom-footer__link:hover {
+    color: #e8bf5d;
+}
+
+.custom-footer__iconset i {
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.custom-footer__iconset i:hover {
+    color: #e8bf5d;
+}
+
+
+/* ========================= MEDIA QUERY ========================= */
+
+@media (max-width: 320px) {
+    .custom-form .cta-btn {
+        padding: 10px 20px;
+    }
+} 
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+    .section-header__heading {
+        font-size: 24px;
+    }
+
+    .section-header__text {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 10px;
+    }
+ }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .page-section {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .about-section, .lawyers-section, .publications-section {
+      padding-bottom: 0;
+    }
+
+    .section-header {
+      margin-bottom: 50px;
+    }
+
+    .hero-cta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-section__heading {
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-section__title {
+        font-size: 45px;
+    }
+
+    .hero-section__subtitle {
+        font-size: 25px;
+    }
+
+    .hero-section__heading::before {
+        display: none;
+    }
+
+    .history-section {
+      margin-bottom: 40px;
+    }
+
+    .practice__point {
+      margin-left: 0;
+    }
+
+    .practice__point p {
+        width: auto;
+    }
+    
+    .practice__icon {
+      margin-top: 20px;
+    }
+
+    .practice__title {
+      text-align: center;
+    }
+
+    .carousel-indicators {
+      bottom: -30px;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        margin-top: 67px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 21px;
+    }
+
+    .history-section__date {
+        width: auto;
+        margin-right: 20px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+    
+    .history-section__date::before {
+        display: none;
+    }
+
+    .practice-section {
+      padding-bottom: 10px;
+    }
+
+    .practice__col {
+      margin-bottom: 40px;
+    }
+
+    .accordion {
+        margin-right: 0;
+    }
+
+    .postcard {
+        flex-wrap: wrap;
+    }
+ }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .custom-form {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .postcard__img {
+        margin-bottom: 20px;
+    }
+
+    .postcard {
+        margin-left: 0;
+    }
+ }
