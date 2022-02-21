@@ -8,9 +8,6 @@
 
 * [Click Here for Live Link / Website  (github)]()
 
-* Screenshot of Live Site -
-
-![alt text](/images/demo.png)
 
 
 ### Technology Used
